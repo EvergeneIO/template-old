@@ -3,14 +3,8 @@ services:
   evergene-auth:
     container_name: "evergene-auth"
     hostname: "evergene-auth"
-    build:
-      context: "."
+    image: image_name
     environment:
-      PORT: ${PORT}
-      CLIENT_ID: ${CLIENT_ID}
-      CLIENT_SECRET: ${CLIENT_SECRET}
-      SCOPES: ${SCOPES}
-      REDIRECT_URI: ${REDIRECT_URI}
     networks:
       - evergene
     labels:
