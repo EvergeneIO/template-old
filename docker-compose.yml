@@ -3,7 +3,8 @@ services:
   evergene-auth:
     container_name: "evergene-auth"
     hostname: "evergene-auth"
-    image: image_name
+    build:
+      context: "."
     environment:
     networks:
       - evergene
